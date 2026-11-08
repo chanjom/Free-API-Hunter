@@ -58,7 +58,6 @@ For every candidate API, record:
 - test_status
 - evidence_notes
 
-Use one of these statuses:
 Use the following unified status codes and names:
 - **A — Verified Free**: current official evidence confirms that the relevant API use is available without payment, card binding, billing activation, paid credits, or automatic overage.
 - **B — Free with Conditions**: a genuinely zero-payment API tier exists, but meaningful non-payment conditions apply, such as attribution, non-commercial use, approval, or strict quota limits. It must still satisfy every absolute zero-cost rule.
