@@ -40,29 +40,34 @@ For every candidate API, record:
 - provider
 - official_homepage
 - official_api_docs
-- pricing_or_quota_source
+- official_pricing
+- official_terms
 - authentication_required
 - registration_required
 - payment_card_required
 - billing_activation_required
 - free_quota_and_period
-- paid_overage_or_auto_topup_behavior
+- overage_behavior
 - rate_limits
 - commercial_use
 - automation_allowed
-- data_or_content_restrictions
-- geographic_or_account_restrictions
-- last_verified_date
+- data_policy
+- region_restrictions
 - verification_status
+- evidence_checked_at
+- test_status
 - evidence_notes
 
 Use one of these statuses:
-- **Verified free**: current official evidence confirms that the relevant API use is available without payment, card binding, billing activation, paid credits, or automatic overage.
-- **Free with conditions**: a genuinely zero-payment API tier exists, but meaningful non-payment conditions apply, such as attribution, non-commercial use, approval, or strict quota limits. It must still satisfy every absolute zero-cost rule.
-- **Card or billing required**: not eligible under this project policy.
-- **Trial or promotional credits only**: not eligible as a durable free API.
-- **Unverified**: official evidence is missing, stale, or unclear.
-- **Unavailable**: endpoint or service is discontinued or cannot currently be accessed.
+Use the following unified status codes and names:
+- **A — Verified Free**: current official evidence confirms that the relevant API use is available without payment, card binding, billing activation, paid credits, or automatic overage.
+- **B — Free with Conditions**: a genuinely zero-payment API tier exists, but meaningful non-payment conditions apply, such as attribution, non-commercial use, approval, or strict quota limits. It must still satisfy every absolute zero-cost rule.
+- **C — Card or Billing Required**: not eligible under this project policy.
+- **D — Trial or Promotional Credits Only**: not eligible as a durable free API.
+- **E — Unverified**: official evidence is missing, stale, or unclear. Do not test or recommend it as free.
+- **F — Unavailable**: endpoint or service is discontinued or cannot currently be accessed.
+
+Only A and B may enter the zero-recharge candidate pool. C and D are excluded, E must not be tested, and F is recorded as unavailable.
 
 ## Privacy and secret handling
 1. Never place API keys, tokens, passwords, cookies, authorization headers, private certificates, or other secrets in source code, Git history, issues, pull requests, logs, screenshots, reports, or public files.
